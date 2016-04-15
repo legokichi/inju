@@ -1,0 +1,23 @@
+{
+  "name": "DistanceMeasurementCentralServer",
+  "version": "2.0.0",
+  "description": "",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "duxca.lib.js": "legokichi/duxca.lib.js",
+    "jszip": "^2.5.0",
+    "msgpack-javascript": "msgpack/msgpack-javascript",
+    "msgpack.js": "uupaa/msgpack.js",
+    "msgpack-lite": "kawanet/msgpack-lite#^0.1.16",
+    "cuttlebone": "^0.2.8",
+    "narloader": "Ikagaka/NarLoader#^0.7.1"
+  },
+  "devDependencies": {},
+  "main": "server.coffee",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules"
+  ]
+}

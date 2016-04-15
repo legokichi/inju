@@ -1,0 +1,37 @@
+{
+  "name": "inju",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.coffee",
+  "scripts": {
+    "init": "npm install -g coffee-script bower; npm run update; npm run build",
+    "update": "rm -rf bower_components; npm update; bower update",
+    "clean": "rm lib/*.js",
+    "start": "supervisor --extensions coffee server.coffee 2>&1 | tee -a server.log & npm run build & npm run watch",
+    "stop": "killall -- supervisor --extensions coffee server.coffee",
+    "build": "coffee -c -o lib src",
+    "watch": "npm run build; coffee -w -c -o lib src",
+    "start-old": "coffee -w -c -o demo src/*.coffee & tsc -w -p src/*.ts & supervisor demo/server.js",
+    "stop-old": "killall -- node /Users",
+    "test-old": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/legokichi/inju.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/legokichi/inju/issues"
+  },
+  "homepage": "https://github.com/legokichi/inju#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "multiparty": "^4.1.2",
+    "node-php": "mkschreder/node-php",
+    "socket.io": "^1.4.4"
+  },
+  "devDependencies": {}
+}
